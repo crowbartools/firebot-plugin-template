@@ -1,4 +1,5 @@
 import firebot, { Plugin } from "@crowbartools/firebot-types";
+import exampleEffect from "./example-effect";
 
 type Params = {
   message: string;
@@ -20,9 +21,12 @@ const plugin: Plugin<Params> = {
       type: "string",
       default: "Hello World!",
       title: "Hello!",
-      description: "Message",
+      description: "Logged to the console when the plugin loads",
     },
   ],
+  registers: {
+    effects: [exampleEffect],
+  },
   onLoad: (context) => {
     firebot.logger.info(context.parameters.message);
   },
