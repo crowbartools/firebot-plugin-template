@@ -22,13 +22,16 @@ The compiled plugin is written to `dist/<pluginOutputName>.js` as a single file.
 
 1. In Firebot, open the plugin manager, click Install, and select the built `.js` file from the `dist/` folder.
 
-During development you can instead run:
+During development you can run:
 
 ```
 npm run build:dev
 ```
 
-This builds the plugin and automatically copies the `.js` into your active Firebot profile's `scripts/` folder, so you don't have to re-select the file each time you make a change. After Firebot has loaded the plugin once, subsequent `build:dev` runs will keep it up to date in place.
+This builds the plugin and automatically copies the `.js` into your active Firebot profile's `scripts/` folder, so you don't have to re-select the file each time you make a change.
+
+If Firebot is running, the script also calls its local API to reload the plugin automatically as a form of hot-reload during development. Requires 
+the file name to match the existing installation.
 
 ### Testing
 
