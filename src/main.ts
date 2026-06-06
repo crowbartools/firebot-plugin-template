@@ -9,8 +9,11 @@ const plugin: Plugin<Params> = {
   manifest: {
     name: "Starter Plugin",
     description: "A starter Firebot plugin",
-    icon: "fa-flask",
-    color: "#a106de",
+    icon: {
+      type: "font-awesome",
+      name: "fa-flask",
+      color: "#a106de",
+    },
     version: "1.0",
     author: "SomeDev",
     type: "plugin",
