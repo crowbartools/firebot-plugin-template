@@ -30,4 +30,8 @@ export default defineConfig({
   },
   // No type declarations needed for a plugin bundle.
   dts: false,
+  // Allow importing .html files as strings
+  loader: {
+    ".html": "text"
+  },
 });
