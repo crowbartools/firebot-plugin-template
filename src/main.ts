@@ -15,8 +15,7 @@ const plugin: Plugin<Params> = {
       color: "#a106de",
     },
     version: "1.0",
-    author: "SomeDev",
-    type: "plugin",
+    author: "SomeDev"
   },
   parametersSchema: [
     {
