@@ -1,5 +1,6 @@
 import firebot, { Plugin } from "@crowbartools/firebot-types";
 import exampleEffect from "./example-effect";
+import exampleOverlayWidget from "./example-overlay-widget";
 
 type Params = {
   message: string;
@@ -28,6 +29,7 @@ const plugin: Plugin<Params> = {
   ],
   registers: {
     effects: [exampleEffect],
+    overlayWidgets: [exampleOverlayWidget],
   },
   onLoad: (context) => {
     firebot.logger.info(context.parameters.message);
